@@ -16,12 +16,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'sudo docker-compose -f /root/mlops2/docker-compose.yml build'
+                sh 'sudo docker-compose -f /root/ecom/docker-compose.yml build'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'sudo docker-compose -f /root/mlops2/docker-compose.yml up -d'
+                sh 'sudo docker-compose -f /root/ecom/docker-compose.yml up -d'
             }
         }
     }

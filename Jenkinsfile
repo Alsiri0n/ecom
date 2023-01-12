@@ -11,7 +11,7 @@ pipeline {
                     extensions: scm.extensions + [[$class: 'SubmoduleOption', parentCredentials: true]],
                     userRemoteConfigs: scm.userRemoteConfigs
                 ])
-                sh 'sudo cp -rvf * /root/mlops2'
+                sh 'sudo cp -rvf * /root/ecom'
             }
         }
         stage('Build') {

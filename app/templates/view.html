@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+
+    View collection
+    <hr>
+    {% for el in coll %}
+        {% if el["name"] and %}
+            <div>{{el}}</div>
+        {% else %}
+            <div><a href="{{url_for('main.view', coll_name = el)}}">{{el}}</a></div>
+        {% endif %}
+
+    {% endfor %}
+
+{% endblock %}

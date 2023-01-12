@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<hr>
+        <a href="{{ url_for('main.index')}}">Main</a><br>
+        <a href="{{ url_for('main.edit')}}">Collection Edit</a><br>
+        <a href="{{ url_for('main.view')}}">Collection View</a><br>
+        <a href="{{ url_for('api.get_form')}}">Test</a><br>
+{% endblock %}

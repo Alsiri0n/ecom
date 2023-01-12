@@ -12,7 +12,7 @@ def edit():
     return render_template("edit.html")
 
 
-@bp.route("/view/<string:coll_name>", defaults={"coll_name": "test_coll"})
+@bp.route("/view/<string:coll_name>")
 @bp.route("/view")
 def view(coll_name: str = ""):
     if coll_name == "":

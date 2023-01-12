@@ -16,7 +16,6 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'sudo mv /root/ecom/.env.example /root/ecom/.env'
                 sh 'sudo docker-compose -f /root/ecom/docker-compose.yml build'
             }
         }

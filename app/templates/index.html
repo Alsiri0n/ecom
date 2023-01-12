@@ -6,5 +6,9 @@
         <a href="{{ url_for('main.index')}}">Main</a><br>
         <a href="{{ url_for('main.edit')}}">Collection Edit</a><br>
         <a href="{{ url_for('main.view')}}">Collection View</a><br>
-        <a href="{{ url_for('api.get_form')}}">Test</a><br>
+        <a href="{{ url_for('main.test')}}">Test</a><br>
+        <form action="", method="POST">
+                {{ form.hidden_tag() }}
+                <p>{{ form.submit() }}</p>
+        </form>
 {% endblock %}

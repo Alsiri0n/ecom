@@ -15,14 +15,15 @@
                     <li>{{ message }}</li>
                 {% endfor %}
             </ul>
+            <hr>
         {% endif %}
     {% endwith %}
     {% block menu %}
     <ul>
-        <li><a href="/">Main</a></li>
-        <li><a href="/edit">Collection Edit</a></li>
-        <li><a href="/view">Collection View</a></li>
-        <li><a href="/test">Test</a></li>
+        <li><a href="{{ url_for('main.index')}}">Main</a></li>
+        <li><a href="{{ url_for('main.edit')}}">Collection Edit</a></li>
+        <li><a href="{{ url_for('main.view')}}">Collection View</a></li>
+        <li><a href="{{ url_for('main.test')}}">Test</a></li>
     </ul>
     {% endblock %}
     {% block content %}

@@ -2,15 +2,13 @@
 
 {% block content %}
 {{ super() }}
-
-    Edit collection
+    <hr>
+    Test collection
     <hr>
     {% if form %}
-        <form action="" method="POST">
+        <form action="/api/get_form" method="POST">
             {{ form.hidden_tag() }}
             <p>
-                {{ form.name.label }}<br>
-                {{ form.name(cols=32, rows=4)}}<br>
                 {{ form.field1_name.label }}<br>
                 {{ form.field1_name(cols=32, rows=4)}}<br>
                 {{ form.field1_value.label }}<br>
@@ -30,5 +28,4 @@
             <p>{{ form.submit() }}</p>
         </form>
     {% endif %}
-
 {% endblock %}
